@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* OCR App Design System - Professional Blues & Greys */
+
+@layer base {
+  :root {
+    /* Professional Color Palette */
+    --background: 210 20% 98%;
+    --foreground: 222 84% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 12%;
+
+    /* Professional Blue Primary */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 55%;
+    --primary-light: 217 91% 70%;
+
+    /* Neutral Secondary */
+    --secondary: 210 30% 95%;
+    --secondary-foreground: 222 47% 20%;
+
+    /* Muted Tones */
+    --muted: 210 30% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent Blue */
+    --accent: 210 40% 94%;
+    --accent-foreground: 217 91% 60%;
+
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* UI Elements */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(217, 91%, 70%));
+    --gradient-subtle: linear-gradient(180deg, hsl(210, 20%, 98%), hsl(210, 30%, 96%));
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%), hsl(210, 30%, 98%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(217, 91%, 60% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(217, 91%, 60% / 0.1), 0 2px 4px -1px hsl(217, 91%, 60% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(217, 91%, 60% / 0.1), 0 4px 6px -2px hsl(217, 91%, 60% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(217, 91%, 60% / 0.1), 0 10px 10px -5px hsl(217, 91%, 60% / 0.04);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode - Professional dark blue theme */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 13%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 13%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary remains consistent */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 55%;
+    --primary-light: 217 91% 70%;
+
+    /* Dark secondary */
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Dark muted */
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Dark accent */
+    --accent: 217 33% 17%;
+    --accent-foreground: 217 91% 60%;
+
+    /* Status colors for dark */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Dark UI elements */
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 217 91% 60%;
+
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(217, 91%, 70%));
+    --gradient-subtle: linear-gradient(180deg, hsl(222, 47%, 11%), hsl(217, 33%, 17%));
+    --gradient-card: linear-gradient(145deg, hsl(222, 47%, 13%), hsl(217, 33%, 15%));
+
+    /* Dark shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0, 0%, 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0, 0%, 0% / 0.1), 0 2px 4px -1px hsl(0, 0%, 0% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(0, 0%, 0% / 0.1), 0 4px 6px -2px hsl(0, 0%, 0% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(0, 0%, 0% / 0.1), 0 10px 10px -5px hsl(0, 0%, 0% / 0.04);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
